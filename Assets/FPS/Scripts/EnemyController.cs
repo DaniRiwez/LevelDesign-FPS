@@ -29,6 +29,9 @@ public class EnemyController : MonoBehaviour
     [Tooltip("Delay after death where the GameObject is destroyed (to allow for animation)")]
     public float deathDuration = 0f;
 
+    public float detectionRange = 50f;
+    public float attackRange = 45f;
+
 
     [Header("Weapons Parameters")]
     [Tooltip("Allow weapon swapping for this enemy")]
@@ -191,6 +194,10 @@ public class EnemyController : MonoBehaviour
             m_EyeColorMaterialPropertyBlock.SetColor("_EmissionColor", defaultEyeColor);
             m_EyeRendererData.renderer.SetPropertyBlock(m_EyeColorMaterialPropertyBlock, m_EyeRendererData.materialIndex);
         }
+
+        //SetDetectionValues
+        m_DetectionModule.detectionRange = detectionRange;
+        m_DetectionModule.attackRange = attackRange;
     }
 
     void Update()
