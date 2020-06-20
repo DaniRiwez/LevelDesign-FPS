@@ -7,9 +7,9 @@ public class DetectionModule : MonoBehaviour
     [Tooltip("The point representing the source of target-detection raycasts for the enemy AI")]
     public Transform detectionSourcePoint;
     [Tooltip("The max distance at which the enemy can see targets")]
-    public float detectionRange = 20f;
+    public float detectionRange = 80f;
     [Tooltip("The max distance at which the enemy can attack its target")]
-    public float attackRange = 10f;
+    public float attackRange = 50;
     [Tooltip("Time before an enemy abandons a known target that it can't see anymore")]
     public float knownTargetTimeout = 4f;
     [Tooltip("Optional animator for OnShoot animations")]
